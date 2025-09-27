@@ -1,0 +1,87 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    color: #1c1e21;
+}
+
+body.dark {
+    background-color: #1a1a1a;
+    color: #e4e6eb;
+}
+
+/* General element styles for dark mode */
+body.dark .bg-white {
+    background-color: #242526 !important;
+}
+
+body.dark .text-gray-800, body.dark .text-gray-700 {
+    color: #e4e6eb !important;
+}
+
+body.dark .text-gray-500 {
+    color: #b0b3b8 !important;
+}
+
+body.dark .border-gray-300 {
+    border-color: #4b4c4d !important;
+}
+
+/* Modal-specific styles for dark mode */
+body.dark .modal-content {
+    background-color: #242526;
+    color: #e4e6eb;
+}
+
+body.dark input, body.dark textarea {
+    background-color: #3a3b3c;
+    border-color: #4b4c4d;
+    color: #e4e6eb;
+}
+
+/* Post card styles for dark mode */
+body.dark .post-card {
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.post-card {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.icon-btn {
+    color: #9c27b0;
+}
+
+/* Tooltip styles */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
